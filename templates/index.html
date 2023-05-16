@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marksheet Generator</title>
+</head>
+<body>
+    <h1>Marksheet Generator</h1>
+    <form action="/generate" method="POST">
+        {% raw %}
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+        {% endraw %}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="rollno">Roll No.:</label>
+        <input type="text" id="rollno" name="rollno"><br><br>
+        <input type="submit" value="Generate Marksheet">
+    </form>
+</body>
+</html>
+
